@@ -40,7 +40,7 @@ def processar_contatos():
         # Envia para cada telefone
         for telefone in telefones:
             # Personaliza a mensagem
-            mensagem = f"Olá, {nome} tudo bem com você"
+            mensagem = f"Olá, {nome} tudo bem com você?"
             
             sucesso = enviar_mensagem_zapi(telefone, mensagem)
             
