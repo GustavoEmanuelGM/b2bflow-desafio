@@ -18,7 +18,7 @@ def enviar_mensagem_zapi(telefone: str, mensagem: str) -> bool:
     instance_id, token = get_zapi_config()
     
     # URL correta da Z-API
-    url = f"https://api.z-api.io/instances/{instance_id}/token/{token}"
+    url = f"https://api.z-api.io/instances/{instance_id}/token/{token}/send-text"
     
     # Dados para enviar
     payload = {
