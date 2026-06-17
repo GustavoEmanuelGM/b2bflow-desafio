@@ -13,7 +13,7 @@ Script Python que lê contatos cadastrados no Supabase e envia mensagens persona
 git clone https://github.com/GustavoEmanuelGM/b2bflow-desafio.git
 cd b2bflow-desafio
 
-#### 2. Prepare o ambiente:
+### 2. Prepare o ambiente:
 python -m venv venv
 
 #### Windows:
@@ -25,14 +25,14 @@ source venv/bin/activate
 #### Instale as dependências:
 pip install -r requirements.txt
 
-##### 3. Variáveis de Ambiente (.env)
+### 3. Variáveis de Ambiente (.env)
 Crie um arquivo .env na raiz do projeto com suas credenciais:
 SUPABASE_URL=https://seu_projeto.supabase.co
 SUPABASE_KEY=sua_chave_anon_public
 ZAPI_INSTANCE_ID=seu_instance_id
 ZAPI_TOKEN=seu_token
 
-###### 4. Setup da Tabela no Supabase
+### 4. Setup da Tabela no Supabase
 Execute este SQL no editor do Supabase:
 CREATE TABLE contatos (
     id BIGSERIAL PRIMARY KEY,
@@ -41,17 +41,17 @@ CREATE TABLE contatos (
     criado_em TIMESTAMPTZ DEFAULT NOW()
 );
 
-####### 5. Execute:
+### 5. Execute:
 python main.py
 
 Formato da Mensagem:
 Olá, {nome_contato} tudo bem com você?
 
-######## Boas Práticas
+### Boas Práticas
 Credenciais protegidas via .env
 Tratamento de erros e logs estruturados
 Separação de responsabilidades (Supabase, Z-API e Orquestrador)
 Suporte a múltiplos telefones por contato (até 3)
 
-Autor
+### Autor
 Gustavo Emanuel Gonçalves Magalhães
